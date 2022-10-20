@@ -6,6 +6,7 @@
 :root {
   --sidebar-bg-color: #1992d4;
   --sidebar-font-color: white;
+  --search-bg-color: #e2e8f0;
 }
 
 ul {
@@ -29,12 +30,29 @@ ul {
   grid-template-areas: 
   "search search notifications"
   "profile profile edit";
+  padding: .1rem 1rem;
 }
 
 .search {
   grid-area: search;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 6fr;
+  align-content: center;
+  align-items: center;
+}
+
+.search-icon {
+  width: 24px;
+  justify-self: center;
+}
+
+.search input {
+  height: 2rem;
+  border-radius: 99px;
+  border: none;
+  outline: none;
+  text-indent: .5rem;
+  background-color: var(--search-bg-color);
 }
 
 .profile {
@@ -54,7 +72,6 @@ ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-
 
 .edit-list {
   display: grid;
