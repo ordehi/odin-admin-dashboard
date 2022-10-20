@@ -22,14 +22,32 @@
 
 .search {
   grid-area: search;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 
 .profile {
   grid-area: profile;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
 }
 
 .notifications {
   grid-area: notifications;
+  display: grid;
+  grid-template-columns: 1fr 2fr 4fr;
+}
+
+.edit {
+  grid-area: edit;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.edit-list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .sidebar {
