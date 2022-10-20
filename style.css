@@ -13,6 +13,10 @@
   --link-color: black;
 }
 
+body {
+  height: 100vh;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -24,6 +28,7 @@ a {
 }
 
 .container {
+  height: 100vh;
   display: grid;
   grid-template: 1fr 5fr / 1fr 3fr 1fr;
   grid-template-areas: 
