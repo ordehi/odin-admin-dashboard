@@ -10,6 +10,7 @@
   --sidebar-bg-color: #1992d4;
   --sidebar-font-color: white;
   --search-bg-color: #e2e8f0;
+  --link-color: black;
 }
 
 ul {
@@ -17,6 +18,10 @@ ul {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
 
 .container {
   display: grid;
@@ -62,16 +67,50 @@ ul {
   grid-area: profile;
   display: grid;
   grid-template-columns: 1fr 3fr;
+  align-content: center;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 99px;
+  margin-left: 50px;
+}
+
+.profile-greeting {
+  font-size: .8rem;
+  font-weight: 500;
+}
+
+.profile-username {
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .notifications {
   grid-area: notifications;
   display: grid;
-  grid-template-columns: 1fr 2fr 4fr;
+  grid-template-columns: 1fr 1fr 2fr;
+  justify-items: center;
+  align-items: center;
 }
 
 .notifications-bell {
   width: 24px;
+}
+
+.notifications-profile-picture {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 99px;
+}
+
+.notifications-user a {
+  color: var(--link-color);
+  font-weight: 700;
 }
 
 .edit {
@@ -122,7 +161,6 @@ ul {
   display: flex;
   align-items: center;
   color: var(--sidebar-font-color);
-  text-decoration: none;
 }
 
 .navbar-item-icon, .settings-icon {
