@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
 }
 
 :root {
+  font-family: 'Roboto', sans-serif;
   --sidebar-bg-color: #1992d4;
   --sidebar-font-color: white;
   --search-bg-color: #e2e8f0;
@@ -65,6 +68,10 @@ ul {
   grid-area: notifications;
   display: grid;
   grid-template-columns: 1fr 2fr 4fr;
+}
+
+.notifications-bell {
+  width: 24px;
 }
 
 .edit {
