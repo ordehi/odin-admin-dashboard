@@ -192,7 +192,7 @@ a {
   display: grid;
   padding: 1.5rem;
   gap: 15px;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 6fr 1fr;
   grid-template-areas: 
   "projects news";
   background-color: var(--beyond-bg-color);
