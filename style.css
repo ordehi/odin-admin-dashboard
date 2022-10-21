@@ -278,11 +278,11 @@ a {
   border-radius: var(--nice-border);
   box-shadow: var(--item-shadow);
   padding: 1rem;
-  width: 300px;
+  width: 250px;
 }
 
 .trending-card {
-  padding-right: 4rem;
+  padding-right: 2.5rem;
 }
 
 .announcement {
