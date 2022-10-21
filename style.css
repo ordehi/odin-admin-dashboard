@@ -45,11 +45,11 @@ a {
 .header {
   grid-area: header;
   display: grid;
-  grid-template: 1fr 1fr / 2fr 1fr 1fr;
+  grid-template: 1fr 1fr / 4fr 1fr 1fr 1fr;
   grid-template-areas: 
-  "search . notifications"
-  "profile . edit";
-  padding: .1rem 1rem;
+  "search search . notifications"
+  "profile . . edit";
+  padding: .5rem 2rem;
   position: relative;
   box-shadow: var(--item-shadow);
 }
@@ -79,17 +79,15 @@ a {
 .profile {
   grid-area: profile;
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 4fr;
   align-content: center;
   align-items: center;
 }
 
 .profile-picture img {
   width: 60px;
-  height: 60px;
   border: 1px solid black;
   border-radius: var(--round-border);
-  margin-left: 50px;
 }
 
 .profile-greeting {
