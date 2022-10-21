@@ -9,8 +9,14 @@
   font-family: 'Roboto', sans-serif;
   --sidebar-bg-color: #1992d4;
   --sidebar-font-color: white;
-  --search-bg-color: #e2e8f0;
+  --beyond-bg-color: #e2e8f0;
   --link-color: black;
+  --content-bg-color: #ffffff;
+  --card-border-color: #f0b429;
+  --card-color: #646464;
+  --round-border: 99px;
+  --nice-border: 8px;
+  --item-shadow: 4px 5px 4px #d4dae2;
 }
 
 body {
@@ -30,7 +36,6 @@ a {
 .container {
   height: 100vh;
   display: grid;
-  grid-template: 1fr 5fr / 1fr 3fr 1fr;
   grid-template-areas: 
   "sidebar header header"
   "sidebar main main";
@@ -44,6 +49,8 @@ a {
   "search search notifications"
   "profile profile edit";
   padding: .1rem 1rem;
+  position: relative;
+  box-shadow: var(--item-shadow);
 }
 
 .search {
@@ -61,11 +68,11 @@ a {
 
 .search input {
   height: 2rem;
-  border-radius: 99px;
+  border-radius: var(--round-border);
   border: none;
   outline: none;
   text-indent: .5rem;
-  background-color: var(--search-bg-color);
+  background-color: var(--beyond-bg-color);
 }
 
 .profile {
@@ -80,7 +87,7 @@ a {
   width: 60px;
   height: 60px;
   border: 1px solid black;
-  border-radius: 99px;
+  border-radius: var(--round-border);
   margin-left: 50px;
 }
 
@@ -110,7 +117,7 @@ a {
   width: 50px;
   height: 50px;
   border: 1px solid black;
-  border-radius: 99px;
+  border-radius: var(--round-border);
 }
 
 .notifications-user a {
@@ -131,6 +138,7 @@ a {
 
 .sidebar {
   grid-area: sidebar;
+  width: 250px;
   display: grid;
   grid-template-rows: 1fr 3fr 5fr;
   background-color: var(--sidebar-bg-color);
@@ -175,4 +183,86 @@ a {
 
 .main {
   grid-area: main;
+  display: grid;
+  padding: 1.5rem;
+  gap: 15px;
+  grid-template: 1fr 1fr / 3fr 1fr;
+  grid-template-areas: 
+  "projects announcements"
+  "projects trending";
+  background-color: var(--beyond-bg-color);
+}
+
+.projects {
+  grid-area: projects;
+  /* display: grid;
+  grid-template: 1fr 5fr / 1fr 1fr;
+  grid-template-areas: 
+  "title title"
+  "card card"
+  "card card"
+  "card card"; */
+}
+
+.projects-title, .announcements-title, .trending-title {
+  font-weight: 500;
+}
+
+.cards {
+  grid-area: card;
+  display: grid;
+  margin-top: 1rem;
+  gap: 20px;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  justify-items: center;
+}
+
+.project-card {
+  height: 200px;
+  display: grid;
+  background-color: var(--content-bg-color);
+  border-left: 8px solid var(--card-border-color);
+  padding: 1rem;
+  box-shadow: var(--item-shadow);
+  border-radius: var(--nice-border);
+}
+
+.project-name {
+  font-weight: 800;
+  padding-top: 1rem;
+}
+
+.project-description, .announcement-content {
+  font-size: .9rem;
+  font-weight: 400;
+  color: var(--card-color);
+}
+
+.announcements, .trending {
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+}
+
+.announcements {
+  grid-area: announcements;
+}
+
+.trending {
+  grid-area: trending;
+}
+
+.announcements-list, .trending-card {
+  background-color: var(--content-bg-color);
+  border-radius: var(--nice-border);
+  box-shadow: var(--item-shadow);
+  padding: 1rem;
+}
+
+.announcement {
+  margin: 1rem;
+}
+
+.announcement-title {
+  font-size: 1rem;
+  font-weight: 800;
 }
